@@ -1,0 +1,9 @@
+name: Simple Reusable Workflow
+on:
+  workflow_call:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Step
+        run: echo "Testing workflow access"
