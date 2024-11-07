@@ -3,9 +3,9 @@ on:
   workflow_call:
     inputs:
       name:
-        description: 'Input description'
+        description: "Input description"
         type: string
-        default: 'Default_Value'
+        default: "Default_Value"
         required: false
     secrets:
       access-token:
