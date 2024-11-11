@@ -9,7 +9,7 @@ on:
         required: false
     secrets:
       access-token:
-        description: 'Secret description'
+        description: "Secret description"
         required: true
 
 jobs:
@@ -25,5 +25,5 @@ jobs:
         run: echo '${{ toJson(github) }}'
       - name: Display name input
         run: echo ${{ inputs.name }}
-      - name: Display acces-token secret
+      - name: Display access-token secret
         run: echo ${{ secrets.access-token }}
