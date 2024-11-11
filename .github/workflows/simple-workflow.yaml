@@ -2,16 +2,19 @@
 name: Simple Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      message:
+        description: 'Message to display'
+        required: true
+        type: string
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Say Hello
-        run: echo "Hello from the workflows repo!"
+      - name: Display message
+        run: echo "${{ inputs.message }}"
