@@ -1,0 +1,17 @@
+name: Calling Reusable Workflows
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Input description"
+        type: string
+        default: "Default_Value"
+        required: false
+
+jobs:
+  calling-a-reusable-wf:
+    uses: Gh-Actions-tests/workflows/.github/workflows/reusable.yaml@main
+    with:
+      name: ${{ inputs.name }}
+    secrets: # inherit --> pass all secrets from caller wf to called wf
+      access-token: ${{ secrets.ACCESS_TOKEN }}
