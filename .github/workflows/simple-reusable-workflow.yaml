@@ -1,8 +1,6 @@
 name: Simple Reusable Workflow
 on:
-  workflow_dispatch:
-permissions:
-  contents: read
+  workflow_call:
 
 jobs:
   test:
