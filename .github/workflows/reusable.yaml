@@ -21,6 +21,8 @@ jobs:
   log-context-and-inputs:
     runs-on: ubuntu-latest
     steps:
+      - name: Should print something
+        run: echo 'Something !'
       - name: Display Github Context
         run: echo '${{ toJson(github) }}'
       - name: Display name input
